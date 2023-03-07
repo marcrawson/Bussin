@@ -1,0 +1,66 @@
+<!-- Hey, Thanks For Checking Out My Code -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map</title>
+        <!-- Leaflet CSS -->
+        <link 
+            rel="stylesheet" 
+            href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin=""
+        />
+        <!-- Style -->
+        <link rel="stylesheet" href="/css/map.css">
+        <% if(userAgent.isMobile){ %>
+            <style>
+                html{
+                    font-size: 40px;
+                }
+                @media (orientation: landscape) {
+                    body, html{
+                        font-size: 16px;
+                    }
+                    #sidePanel{
+                        height: 100%
+                    }
+                }
+            </style>
+        <% } %>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="map"></div> 
+            <div id="sidePanel">
+                <div id="mapType-selectors">
+                    <button class="mapType-selector" onclick="setMapType(0)">Stops</button>
+                    <button class="mapType-selector" onclick="setMapType(1)">Buses</button>
+                </div>
+                <div id="searchBar">
+                    <input type='text' id="searchBar-text">
+                    <button id="searchBar-button" onclick="searchEnter()"></button>
+                </div>
+                <div id='dynamic-results'>
+                    <!-- Set Dynamically -->
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Leaflet JS -->
+    <script 
+        src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin="">
+    </script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Main Scripts -->
+    <script src="/scripts/map.scripts.js"></script>
+    
+    <script>
+        setMapType(<%= type %>);
+        const isMobile = <%= userAgent.isMobile %>;
+    </script>
+</html>

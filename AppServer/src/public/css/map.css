@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-family: sans-serif;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+button{
+    cursor: pointer;
+}
+
+#main-container{
+    display: flex;
+    flex: 1;
+}
+
+#map { 
+    flex: 1;
+}
+
+.leaflet-marker-icon{
+    font-size: 0px;
+}
+
+#sidePanel{
+    width: 20rem;
+    
+    border-left: .07rem solid rgb(214, 214, 214);
+    padding: 1.2rem 1rem;
+    padding-bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#mapType-selectors{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: .4rem;
+}
+
+.mapType-selector{
+    flex: 1;
+    border-radius: .3rem;
+    height: 3rem;
+    
+    background-color: rgb(9, 190, 0);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+#result-header{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+#result-title{
+    min-height: 2.7rem;
+    flex: 1;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+#title-code{
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+#clear-button{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgb(206, 206, 206);
+    border-radius: 50%;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/OOjs_UI_icon_close.svg/1200px-OOjs_UI_icon_close.svg.png);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+#searchBar{
+    display: flex;
+    gap: .5rem;
+    height: 3rem;
+    width: 100%;
+}
+
+#searchBar-text{
+    flex: 1;
+    background-color: rgb(248, 248, 248);
+    box-sizing: border-box;
+    border: .1rem solid rgb(227, 227, 227);
+    border-radius: .2rem;
+    padding: 0 .7rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#searchBar-button{
+    height: 3rem;
+    width: 3rem;
+    border-radius: .2rem;
+    background-color: rgb(57, 57, 255);
+    cursor: pointer;
+}
+
+#dynamic-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: inherit;
+    
+    flex: 1;
+    overflow: auto;
+    width: 100%;
+}
+
+.loading-img{
+    height: 6rem;
+    width: 6rem;
+    margin: 4rem;
+}
+
+#bus-results{
+    flex: 1;
+    padding-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    overflow: auto;
+}
+
+.bus-result{
+    flex-shrink: 0;
+    width: 100%;
+    height: 5rem;
+    box-sizing: border-box;
+    padding: 0 .5rem;
+    border: .1rem solid rgb(227, 227, 227);
+
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.result-time{
+    width: 5rem;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2rem;
+}
+
+.result-time-arrival{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: rgb(73, 73, 73);
+}
+
+.result-time-punctuality{
+    font-size: .8rem;
+    text-align: center;
+    color: grey;
+}
+
+.result-time-punctuality.Late{
+    color: red;
+}
+
+.result-time-punctuality.Early, .result-time-punctuality.onTime{
+    color: rgb(0, 184, 0);
+}
+
+@media (width < 65rem){
+    #main-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #sidePanel{
+        width: calc(100% - 10vw);
+        padding: 2rem 5vw;
+        height: calc(11rem - 4rem);
+        transition: all 600ms;
+    }
+
+    #sidePanel.expand{
+        height: 30rem;
+        padding-bottom: 0;
+    }
+}

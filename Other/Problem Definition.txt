@@ -1,0 +1,15 @@
+Bus On Time Arrival Predictor Using Neural Networks and Deep Learning
+
+Marc Rawson
+
+January 24, 2023
+
+
+Need: BC Transit busses in Victoria, BC can be very late at times, and it is discouraging to use public transit when it can be unpredictable.
+
+Goal: To have a reliable program that can predict if a bus will be late to a specified stop or if it will be on time with above 50% success rate.
+
+Data used for collection: weather, day of week, time of day, school in session, traffic congestion score?
+
+Data TypeApprox. Weight (1-10)UnitsPrecipitation6None, Low, Med/HighTemperature3¡CVisibility2kmDay of week3M,T,W,T,F,S,SSchool day4False, True
+Methods of data collection: Choose stop, find stop ID, text (11111) (stop ID, Bus Route) [(10xxxx) xx], if estimated time = time + 1 then on-time, find current temp, find current visibility, find day of week, find if school day, display in CSV.
