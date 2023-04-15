@@ -2,9 +2,7 @@
 
 ### Real-time bus monitering and forecasting
 
-Introducing Bussin'
-
-Introducing the ultimate solution for frustrated commuters everywhere: BusTracker, the app that predicts the arrival time of city buses using state-of-the-art machine learning algorithms! Say goodbye to the uncertainty of public transportation and hello to a stress-free commute. Whether you're running late for work or just trying to avoid standing in the rain, BusTracker has got you covered with real-time updates and accurate predictions. Download now and experience the future of transportation!
+Introducing solution for frustrated commuters everywhere: Bussin', the app that predicts the arrival times of BC Transit city buses using machine learning. Say goodbye to the uncertainty of public transportation and hello to a stress-free commute. Whether you're running late for work or just trying to avoid standing in the rain, Bussin' has got you covered with real-time updates and accurate predictions, even days in advance. Use Bussin' and experience the future of transportation.
 
 ### Machine-learning pseudocode
 
@@ -18,7 +16,7 @@ Introducing the ultimate solution for frustrated commuters everywhere: BusTracke
     
     Synaptic weights are then used to calculate if future buses are likely to be on-time or late.
 
-### Data sources include:
+### Data sources:
 - Weather
   - Temperature
   - Precipitation
@@ -32,3 +30,10 @@ Introducing the ultimate solution for frustrated commuters everywhere: BusTracke
 - Bus factors
   - Route number
   - Stop-id
+
+### Creators
+**Luca Tozzini**  
+github.com/LucaTozzini/
+
+**Marc Rawson**  
+github.com/marcrawson/
