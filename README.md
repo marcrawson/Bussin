@@ -31,9 +31,4 @@ Introducing solution for frustrated commuters everywhere: Bussin', the app that 
   - Route number
   - Stop-id
 
-### Creators
-**Luca Tozzini**  
-github.com/LucaTozzini/
 
-**Marc Rawson**  
-github.com/marcrawson/
