@@ -1,6 +1,6 @@
 # Bussin'
 
-### Real-time bus monitering and forecasting
+### Real-time bus monitoring and forecasting
 
 Introducing solution for frustrated commuters everywhere: Bussin', the app that predicts the arrival times of BC Transit city buses using machine learning. Say goodbye to the uncertainty of public transportation and hello to a stress-free commute. Whether you're running late for work or just trying to avoid standing in the rain, Bussin' has got you covered with real-time updates and accurate predictions, even days in advance. Use Bussin' and experience the future of transportation.
 
